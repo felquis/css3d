@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Ofelquis Gimenes">
+	<meta name="description" content="Tranformações 3D baseado nos movimentos do mouse">
+	<meta name="keywords" content="3d, transform, css3, mousemove, javascript">
+	<title>CSS3 Transform rotate on mouse move</title>
+	<style type="text/css">
+		html, body{
+			padding: 0;
+			margin: 0;
+			width:100%;
+			height:100%;
+			position: absolute;
+		}
+		#elem{
+			background: url("http://tutsmais.com.br/blog/wp-content/uploads/2012/03/A-Collection-of-CSS-Snippets-for-Sublime-Text-2.png") no-repeat scroll 0 0 black;
+		    display: block;
+		    font: 50px Impact;
+		    height: 62px;
+		    margin: 10% auto 0;
+		    padding-top: 249px;
+		    position: relative;
+		    text-align: center;
+		    width: 684px;
+		}
+	</style>
+</head>
+<body>
+	<div id="elem">Hello, i'm a happy test</div>
+	<script>
+		/*
+			By     : Ofelquis
+			Twitter: @felquis
+			Blog   : tutsmais.com.br
+
+			Simples implementação ;)
+		*/
+		!(function ($doc, $win) {
+			var screenWidth = $win.screen.width / 2,
+				screenHeight = $win.screen.height / 2,
+				$elem = $doc.querySelectorAll('#elem')[0],
+				validPropertyPrefix = '',
+				otherProperty = 'perspective(600px)';
+
+				if(typeof $elem.style.webkitTransform == 'string') {
+					validPropertyPrefix = 'webkitTransform';
+				} else {
+					if (typeof $elem.style.MozTransform == 'string') {
+						validPropertyPrefix = 'MozTransform';
+					}
+				}
+
+			$doc.addEventListener('mousemove', function (e) {
+				// vars 
+				var centroX 	= e.clientX - screenWidth,
+					centroY 	= screenHeight - (e.clientY + 13),
+					degX   = centroX * 0.1,
+					degY   = centroY * 0.1
+
+				// Seta o rotate do elemento
+				$elem.style[validPropertyPrefix] = otherProperty + 'rotateY('+ degX +'deg)  rotateX('+ degY +'deg)';
+			});
+		})(document, window);
+	</script>
+</body>
+</html>
