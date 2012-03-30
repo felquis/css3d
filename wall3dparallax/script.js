@@ -12,7 +12,18 @@ var $imgs = $doc.querySelectorAll('img'),
 	screenWidth = $win.screen.width / 2,
 	screenHeight = $win.screen.height / 2,
 	validPropertyPrefix = '',
-	otherProperty = 'perspective(600px)';
+	otherProperty = 'perspective(600px)',
+// Esta function retorna a posição top e left do elemento	
+	returnPosition = function (obj) {
+			var currentTop = currentLeft = 0;
+		if (obj.offsetParent) {
+			do {
+				currentTop  += obj.offsetTop;
+				currentLeft += obj.offsetLeft;
+			} while (obj = obj.offsetParent);
+			return [currentTop, currentLeft]
+		}
+	};
 
 // Faz as imagens aparecerem com uma opacidade
 	for (var i = totalImg; i>=0; i--) {
@@ -41,3 +52,4 @@ var $imgs = $doc.querySelectorAll('img'),
 		}
 	});
 })(document, window);
+
