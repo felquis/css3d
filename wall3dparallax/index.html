@@ -13,10 +13,63 @@
 			width:100%;
 			height:100%;
 			position: absolute;
+			background-color:#000;
+		}
+		#wall {
+			display: block;
+			width:1000px;
+			margin: 100px auto 0;
+		}
+		.brick{
+			background-color: #fff;
+			width:100px;
+			height:150px;
+			float: left;
+			position: relative;
+			margin: 5px;
+			background:url(http://dev.codeanywhere.net/107/02f2736173098138e657658095f638f0/loading-img.gif.gif) center no-repeat;
+		}
+		.brick img{
+			opacity: 0;
+			-webkit-transition: opacity 0.3s ease-in-out;
+			-moz-transition: opacity 0.3s ease-in-out;
+			-o-transition: opacity 0.3s ease-in-out;
+			-ms-transition: opacity 0.3s ease-in-out;
+			transition: opacity 0.3s ease-in-out;
 		}
 	</style>
 </head>
 <body>
+
+	<section id="wall">
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/1/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/2/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/3/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/4/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/5/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/6/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/7/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/8/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/9/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/sports/10/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/1/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/2/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/3/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/4/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/5/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/6/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/7/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/8/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/9/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/food/10/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/1/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/2/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/3/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/4/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/5/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/6/" alt=""></div>
+		<div class="brick"><img src="http://lorempixel.com/100/150/people/7/" alt=""></div>
+	</section>
 
 <script src="script.js" defer></script>
 </body>
