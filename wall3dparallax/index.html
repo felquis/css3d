@@ -29,13 +29,20 @@
 			margin: 5px;
 			background:url(http://dev.codeanywhere.net/107/02f2736173098138e657658095f638f0/loading-img.gif.gif) center no-repeat;
 		}
+		.brick:hover img{
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+		}
 		.brick img{
 			opacity: 0;
-			-webkit-transition: opacity 0.3s ease-in-out;
-			-moz-transition: opacity 0.3s ease-in-out;
-			-o-transition: opacity 0.3s ease-in-out;
-			-ms-transition: opacity 0.3s ease-in-out;
-			transition: opacity 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
 		}
 	</style>
 </head>

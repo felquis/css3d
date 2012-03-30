@@ -48,6 +48,14 @@ var $imgs = $doc.querySelectorAll('img'),
 			degY   = centroY * 0.1
 	// Percorre os elementos adicionando as transformações
 		for (var i = totalImg; i>=0; i--) {
+
+			var pos = returnPosition($imgs[i]);
+
+			centroX = e.clientX - pos[1],
+			centroY = pos[0] - (e.clientY + 13),
+			degX    = centroX * 0.1,
+			degY    = centroY * 0.1
+
 			$imgs[i].parentNode.style[validPropertyPrefix] = otherProperty + 'rotateY('+ degX +'deg)  rotateX('+ degY +'deg)';
 		}
 	});
