@@ -69,13 +69,14 @@ var $imgs = $doc.querySelectorAll('img'),
 			if (elem.className.indexOf('lol') == -1) {
 				for (var i = totalImg; i>=0; i--) {
 					$imgs[i].className = 'brick';
+					$imgs[i].parentNode.style.zIndex = 5;
 				}
 
 				elem.className = 'brick lol';
-				console.log('poe')
+				elem.parentNode.style.zIndex = 10;
 			} else {
-				console.log('tira')
 				elem.className = 'brick';
+				elem.parentNode.style.zIndex = 5;
 			}
 		}
 	});
