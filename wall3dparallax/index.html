@@ -13,12 +13,12 @@
 			width:100%;
 			height:100%;
 			position: absolute;
-			background-color:#000;
+			background-color:#000
 		}
 		#wall {
 			display: block;
 			width:1000px;
-			margin: 100px auto 0;
+			margin: 100px auto 0
 		}
 		.brick{
 			background-color: #fff;
@@ -30,29 +30,22 @@
 			background:url(http://dev.codeanywhere.net/107/02f2736173098138e657658095f638f0/loading-img.gif.gif) center no-repeat;
 			z-index:5
 		}
-		.brick:hover {
-			-webkit-transition: all 0.3s ease-in-out;
-			-moz-transition: all 1s ease-in-out;
-			-o-transition: all 0.3s ease-in-out;
-			-ms-transition: all 0.3s ease-in-out;
-			transition: all 0.3s ease-in-out;
-		}
 		.brick img.lol {
 			-moz-transform: translate(-200px,  -200px) perspective(600px) rotateY(360deg);
+			-webkit-transform: translate(-200px,  -200px) perspective(600px) rotateY(360deg);
 			width:400%;
 			height:400%
-		}
-		section div.zindex{
-			z-index:10
 		}
 		.brick img{
 			width: 100%;
 			opacity: 0;
+			-moz-transform: translate(0px,  0px) perspective(600px) rotateY(0deg);
+			-webkit-transform: translate(0px,  0px) perspective(600px) rotateY(0deg);
 			-webkit-transition: all 0.3s ease-in-out;
 			-moz-transition: all 0.3s ease-in-out;
 			-o-transition: all 0.3s ease-in-out;
 			-ms-transition: all 0.3s ease-in-out;
-			transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out
 		}
 	</style>
 </head>
