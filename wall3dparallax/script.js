@@ -59,5 +59,24 @@ var $imgs = $doc.querySelectorAll('img'),
 			$imgs[i].parentNode.style[validPropertyPrefix] = otherProperty + 'rotateY('+ degX +'deg)  rotateX('+ degY +'deg)';
 		}
 	});
-})(document, window);
 
+// Adiciona o click para deixar a foto grande e para retorna-la
+	$doc.addEventListener('click', function (i) {
+		//console.dir(i.target);
+		elem = i.target;
+		if (elem.tagName.toLowerCase() == 'img') {
+
+			if (elem.className.indexOf('lol') == -1) {
+				for (var i = totalImg; i>=0; i--) {
+					$imgs[i].className = 'brick';
+				}
+
+				elem.className = 'brick lol';
+				console.log('poe')
+			} else {
+				console.log('tira')
+				elem.className = 'brick';
+			}
+		}
+	});
+})(document, window);
