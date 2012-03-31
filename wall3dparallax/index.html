@@ -18,14 +18,14 @@
 		#wall {
 			display: block;
 			width:1000px;
-			margin: 100px auto 0
+			margin: 100px auto 0;
+			position: relative;
 		}
 		.brick{
 			background-color: #fff;
 			width:100px;
 			height:150px;
 			float: left;
-			position: relative;
 			margin: 5px;
 			background:url(http://dev.codeanywhere.net/107/02f2736173098138e657658095f638f0/loading-img.gif.gif) center no-repeat;
 			z-index:5
@@ -34,18 +34,32 @@
 			-moz-transform: translate(-200px,  -200px) perspective(600px) rotateY(360deg);
 			-webkit-transform: translate(-200px,  -200px) perspective(600px) rotateY(360deg);
 			width:400%;
-			height:400%
+			height:400%;
+			position: absolute;
 		}
 		.brick img{
 			width: 100%;
 			opacity: 0;
 			-moz-transform: translate(0px,  0px) perspective(600px) rotateY(0deg);
 			-webkit-transform: translate(0px,  0px) perspective(600px) rotateY(0deg);
-			-webkit-transition: all 0.3s ease-in-out;
-			-moz-transition: all 0.3s ease-in-out;
-			-o-transition: all 0.3s ease-in-out;
-			-ms-transition: all 0.3s ease-in-out;
-			transition: all 0.3s ease-in-out
+			-webkit-transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-o-transition: all 1s ease-in-out;
+			-ms-transition: all 1s ease-in-out;
+			transition: all 1s ease-in-out
+		}
+		footer {
+			color:white;
+			display: block;
+			clear: both;
+			position: relative;
+		}
+		footer a {
+			color:red;
+			text-decoration:none;
+		}
+		footer a:hover {
+			text-decoration:underline;
 		}
 	</style>
 </head>
@@ -80,7 +94,12 @@
 		<div class="brick"><img src="http://lorempixel.com/400/500/people/6/" alt=""></div>
 		<div class="brick"><img src="http://lorempixel.com/400/500/people/7/" alt=""></div>
 	</section>
-
+	<footer>
+		Images by lorempixum <br />
+		GitHub <a href="http://j.mp/H56s1C">Wall3DParallax</a> <br />
+		Twitter <a href="http://j.mp/GZVG95">@felquis</a><br />
+		Blog <a href="http://j.mp/iL8pxY">TutsMais</a>
+	</footer>
 <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /*
-	By     : Ofelquis
+	By Ofelquis
 	Twitter: @felquis
 	Blog   : tutsmais.com.br
 */
@@ -74,6 +74,7 @@ var $imgs = $doc.querySelectorAll('img'),
 
 				elem.className = 'brick lol';
 				elem.parentNode.style.zIndex = 10;
+				console.log(returnPosition(elem));
 			} else {
 				elem.className = 'brick';
 				elem.parentNode.style.zIndex = 5;
