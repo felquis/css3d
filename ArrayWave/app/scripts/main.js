@@ -31,11 +31,15 @@
 
 		$canvas.html(toHTML(Matriz));
 
-			$canvas.on('hover', 'span', function () {
-				var $this = $(this),
-					line = $this.parent().index(),
-					col = $this.index();
-				console.log(line, col);
-			});
+
+
+	// Hover nos span, retorna a posição do elemento no Array
+		$canvas.on('hover', 'span', function () {
+			var $this = $(this),
+				line = $this.parent().index(),
+				col = $this.index();
+
+			console.log(line, col);
+		});
 	});
 }(jQuery, window, document));
