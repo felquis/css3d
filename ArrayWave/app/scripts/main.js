@@ -30,5 +30,12 @@
 			}
 
 		$canvas.html(toHTML(Matriz));
+
+			$canvas.on('hover', 'span', function () {
+				var $this = $(this),
+					line = $this.parent().index(),
+					col = $this.index();
+				console.log(line, col);
+			});
 	});
 }(jQuery, window, document));
