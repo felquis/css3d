@@ -1,1 +1,16 @@
 /* Will be compiled down to a single stylesheet with your sass files */
+.principal {
+	display: block;
+}
+
+.line {
+	display: block;
+}
+.line span {
+	display: inline-block;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	outline: 1px solid green;
+	margin: 0 0 1px 1px;
+}
