@@ -13,4 +13,9 @@
 	height: 20px;
 	outline: 1px solid green;
 	margin: 0 0 1px 1px;
+	cursor: pointer;
+}
+
+.line span:hover {
+	background: silver;
 }
