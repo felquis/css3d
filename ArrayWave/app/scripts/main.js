@@ -60,15 +60,16 @@
 		valorMaximo = 10;
 
 	// Hover nos span, retorna a posição do elemento no Array
-		$canvas.on('hover', 'span', function () {
+		$canvas.on('mouseenter', 'span', function () {
 			var $this = $(this),
 				myPointY = $this.parent().index(),
 				myPointX = $this.index(); 
 
+				console.log(myPointX, myPointY);
+
 				$.each(MatrizDOM, function (PointY, arr) {
 					$.each(arr, function (PointX) {
-
-						result = valorMaximo - Math.max(Math.abs(myPointX - PointX), Math.abs(myPointY - PointY));
+						result = valorMaximo - Math.max(Math.abs(myPointX - PointY), Math.abs(myPointY - PointX));
 
 						MatrizDOM[PointX][PointY].html(result);
 					});
