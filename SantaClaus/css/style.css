@@ -68,7 +68,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 10, ../scss/style.scss */
+/* line 9, ../scss/style.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 14, ../scss/style.scss */
 .original {
   border: 1px solid #000;
+  position: absolute;
+  top: 100px;
+  margin: 0 auto;
+  width: 352px;
+  height: 352px;
+}
+
+/* line 24, ../scss/style.scss */
+.santa-claus {
+  border: 1px solid #000;
+  position: absolute;
+  top: 100px;
+  margin: 0 auto;
+  width: 352px;
+  height: 352px;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
 }

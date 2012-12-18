@@ -6,7 +6,30 @@
 
 @import "compass/reset";
 
+body, html {
+	height: 100%;
+}
+
 // original image styles
 .original {
 	border: 1px solid #000;
+	position: absolute;
+	top: 100px;
+	margin: 0 auto;
+	width: 352px;
+	height: 352px;
 }
+
+// Local do papai noel
+.santa-claus {
+	border: 1px solid #000;
+	position: absolute;
+	top: 100px;
+	margin: 0 auto;
+	width: 352px;
+	height: 352px;
+	display: block;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+
