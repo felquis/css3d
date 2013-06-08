@@ -10,11 +10,12 @@ Se você encontrar um defeito em algum experimento ou quer me passar alguma dica
 * Enviar um e-mail [oi@felquis.com](mailto:oi@felquis.com)
 
 ## Lista de experimentos
-* [Wall 3D Parallax](wall3dparallax/index.html)
-* [Text Shadow Parallax](text-shadow-parallax/index.html)
-* [CSS3 Transform Rotate on Mouse Move](rotateOnMouseMove/index.html)
+* [Wall 3D Parallax](http://felquis.github.io/css3d/wall3dparallax/index.html)
+* [Text Shadow Parallax](http://felquis.github.io/css3d/text-shadow-parallax/index.html)
+* [CSS3 Transform Rotate on Mouse Move](http://felquis.github.io/css3d/rotateOnMouseMove/index.html)
 
  ---
  > That's all folks :zap:
  > Since 08/03/2012
+
  ---
