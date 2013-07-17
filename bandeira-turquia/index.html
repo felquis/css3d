@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio CSS 04</title>
+<style>
+    body:before,
+    .turquia,
+    .turquia:before,
+    .turquia:after {
+        display: block;
+    }
+
+    body:before,
+    .turquia:before,
+    .turquia:after {
+        content: "";
+    }
+
+    .turquia,
+    .turquia:after {
+        color: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    .turquia {
+        top: 182px;
+        left: 294px;
+        position: relative;
+        border-right: 49px solid transparent;
+        border-bottom: 33px solid #fff;
+        border-left: 46px solid transparent;
+        -webkit-transform: rotate(18deg);
+        transform: rotate(18deg);
+    }
+
+    .turquia:before {
+        border-bottom: 40px solid #fff;
+        border-left: 13px solid transparent;
+        border-right: 14px solid transparent;
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -26px;
+        left: -29px;
+        -webkit-transform: rotate(-35deg);
+        transform: rotate(-35deg);
+    }
+
+    .turquia:after {
+        position: absolute;
+        top: 2px;
+        left: -44px;
+        border-right: 42px solid transparent;
+        border-bottom: 31px solid rgb(255, 255, 255);
+        border-left: 45px solid transparent;
+        -webkit-transform: rotate(-72deg) scale(1.1);
+        transform: rotate(-72deg) scale(1.1);
+    }
+
+    html {
+        background: #fff;
+        height: 100%;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        -webkit-box-pack: center; -moz-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center
+    }
+
+    body {
+        margin: 0;
+        background: #e30917;
+        width: 600px;
+        height: 400px;
+        position: relative
+    }
+
+    body:before {
+        position: absolute;
+        top: 120px;
+        left: 157px;
+        border-radius: 50%;
+        background: #e30917;
+        width: 160px;
+        height: 160px;
+        box-shadow: -7px 20px 0px -7px #fff, -4px -19px 0px -9px #fff, -26px 0px 0px 19px #fff, -25px -1px 0px 19px #fff, -26px 1px 0px 19px #fff, 2px -15px 0px -11px #fff, -6px 16px 0px -5px #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="turquia"></div>
+</body>
+</html>
