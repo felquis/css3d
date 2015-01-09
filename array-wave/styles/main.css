@@ -1,104 +1,104 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 
 body, html, body .canvas {
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 body .canvas {
-	position: relative;
-	margin: 0 auto;
-	overflow: hidden;
-	width: 70%;
-	height: 70%;
-	top: 15%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 70%;
+  height: 70%;
+  top: 15%;
 }
 
 .principal {
-	display: block;
-	width: 2000em;
-	height: 2000em;
+  display: block;
+  width: 2000em;
+  height: 2000em;
 }
 
 .line {
-	display: block;
-	height: 20px;
-	margin: 0 0 1px 0;
+  display: block;
+  height: 20px;
+  margin: 0 0 1px 0;
 }
 
 .line span {
-	display: inline-block;
-	text-align: center;
-	width: 20px;
-	height: 20px;
-	margin: 0 0 0 1px;
-	background-color: rgb(140,140,140);
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 1px;
+  background-color: rgb(140,140,140);
 }
 
 .canvas {
-	-webkit-perspective: 500;
+  -webkit-perspective: 500;
 }
 
 .principal {
-	-webkit-transform-style: preserve-3d;
-	-webkit-transform: rotateX(0) rotatey(0);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(0) rotatey(0);
 }
 
 .line .s10 {
-	background-color: rgb(0,0,0);
-	-webkit-transform: translateZ(50px);
+  background-color: rgb(0,0,0);
+  -webkit-transform: translateZ(50px);
 }
 .line .s9 {
-	background-color: rgb(10,10,10);
-	-webkit-transform: translateZ(45px);
+  background-color: rgb(10,10,10);
+  -webkit-transform: translateZ(45px);
 }
 .line .s8 {
-	background-color: rgb(20,20,20);
-	-webkit-transform: translateZ(40px);
+  background-color: rgb(20,20,20);
+  -webkit-transform: translateZ(40px);
 }
 .line .s7 {
-	background-color: rgb(30,30,30);
-	-webkit-transform: translateZ(35px);
+  background-color: rgb(30,30,30);
+  -webkit-transform: translateZ(35px);
 }
 .line .s6 {
-	background-color: rgb(40,40,40);
-	-webkit-transform: translateZ(30px);
+  background-color: rgb(40,40,40);
+  -webkit-transform: translateZ(30px);
 }
 .line .s5 {
-	background-color: rgb(50,50,50);
-	-webkit-transform: translateZ(25px);
+  background-color: rgb(50,50,50);
+  -webkit-transform: translateZ(25px);
 }
 .line .s4 {
-	background-color: rgb(60,60,60);
-	-webkit-transform: translateZ(20px);
+  background-color: rgb(60,60,60);
+  -webkit-transform: translateZ(20px);
 }
 .line .s3 {
-	background-color: rgb(70,70,70);
-	-webkit-transform: translateZ(15px);
+  background-color: rgb(70,70,70);
+  -webkit-transform: translateZ(15px);
 }
 .line .s2 {
-	background-color: rgb(80,80,80);
-	-webkit-transform: translateZ(10px);
+  background-color: rgb(80,80,80);
+  -webkit-transform: translateZ(10px);
 }
 .line .s1 {
-	background-color: rgb(90,90,90);
-	-webkit-transform: translateZ(5px);
+  background-color: rgb(90,90,90);
+  -webkit-transform: translateZ(5px);
 }
 .line .s0 {
-	background-color: rgb(100,100,100);
-	-webkit-transform: translateZ(0px);
+  background-color: rgb(100,100,100);
+  -webkit-transform: translateZ(0px);
 }
 .line .s-1 {
-	background-color: rgb(110,110,110);
+  background-color: rgb(110,110,110);
 }
 .line .s-2 {
-	background-color: rgb(120,120,120);
+  background-color: rgb(120,120,120);
 }
 .line .s-3 {
-	background-color: rgb(130,130,130);
+  background-color: rgb(130,130,130);
 }

@@ -39,65 +39,65 @@ function errorHandler(e) {
 
 window.requestFileSystem(window.TEMPORARY, 5*1024*1024, function(fs) {
 
-	var $result = document.getElementById('result');
+  var $result = document.getElementById('result');
 
-	var saveInputFile = function () {
-		document.querySelector('#input').onchange = function(e) {
-			var file = this.files[0];
+  var saveInputFile = function () {
+    document.querySelector('#input').onchange = function(e) {
+      var file = this.files[0];
 
-			if (file.type != 'text/html') {
+      if (file.type != 'text/html') {
 
-				alert('Aceita apenas arquivos .html');
+        alert('Aceita apenas arquivos .html');
 
-				return false;
-			}
+        return false;
+      }
 
-			// removeAllFiles();
+      // removeAllFiles();
 
-		  	(function(f) {
-		    	fs.root.getFile(file.name, {create: true, exclusive: true}, function(fileEntry) {
-	      			fileEntry.createWriter(function(fileWriter) {
-	        			fileWriter.write(f); // Note: write() can take a File or Blob object.
+        (function(f) {
+          fs.root.getFile(file.name, {create: true, exclusive: true}, function(fileEntry) {
+              fileEntry.createWriter(function(fileWriter) {
+                fileWriter.write(f); // Note: write() can take a File or Blob object.
 
-	        			readDirectory();
-	      			}, errorHandler);
-	 			}, errorHandler);
-		  	})(file);
-		};
-	}
+                readDirectory();
+              }, errorHandler);
+        }, errorHandler);
+        })(file);
+    };
+  }
 
-	saveInputFile();
+  saveInputFile();
 
-	var readDirectory = function () {
-		var dirReader = fs.root.createReader();
+  var readDirectory = function () {
+    var dirReader = fs.root.createReader();
 
-		dirReader.readEntries(function (re) {
+    dirReader.readEntries(function (re) {
 
-			for (var i = re.length - 1; i >= 0; i--) {
-				$result.innerHTML = '<iframe src="'+ re[i].toURL() +'"></iframe>';
-			};
-		});
-	}
+      for (var i = re.length - 1; i >= 0; i--) {
+        $result.innerHTML = '<iframe src="'+ re[i].toURL() +'"></iframe>';
+      };
+    });
+  }
 
-	readDirectory();
+  readDirectory();
 
-	var removeAllFiles = function () {
-		var dirReader = fs.root.createReader();
+  var removeAllFiles = function () {
+    var dirReader = fs.root.createReader();
 
-		dirReader.readEntries(function (res) {
-			for (var i = res.length - 1; i >= 0; i--) {
-				if (res[i].isFile) {
-					res[i].remove(function (e) {
-						console.log('Removendo outros arquivos temporarios');
-					}, function () {
-						console.log('Remover Err', e);
-						debugger;
-					});
+    dirReader.readEntries(function (res) {
+      for (var i = res.length - 1; i >= 0; i--) {
+        if (res[i].isFile) {
+          res[i].remove(function (e) {
+            console.log('Removendo outros arquivos temporarios');
+          }, function () {
+            console.log('Remover Err', e);
+            debugger;
+          });
 
-				}
-			};
-		});
-	}
+        }
+      };
+    });
+  }
 
-	// removeAllFiles();
+  // removeAllFiles();
 }, errorHandler);
