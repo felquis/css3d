@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrap {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+      left: 120px;
+      top: -30px;
+      animation-name: show-it;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+    }
+    .cube {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      transform-style: preserve-3d;
+      transform: rotateX(-30deg) rotateY(45deg);
+    }
+    .cube div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .left {
+      transform: rotateY(90deg) translateX(50%) translateZ(-100px);
+      background: blue;
+    }
+    .top {
+      transform: rotateX(90deg) translateZ(50px) translateX(-50%) translateY(-50%);
+      background: red;
+    }
+    .right {
+      transform: translateZ(0px) translateX(-50%);
+      background: yellow;
+    }
+    .cube:nth-child(2) {
+      transform: rotateX(-30deg) rotateY(45deg) translate(0px, 100px) translateZ(100px);
+    }
+    .cube:nth-child(3) {
+      transform: rotateX(-30deg) rotateY(45deg) translate(-100px, 100px);
+    }
+    .piece {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+      background: green;
+    }
+    .cube:nth-child(1) .piece {
+      transform: rotateY(90deg) translate(-50px, 0);
+    }
+    .cube:nth-child(2) .piece {
+      transform: rotateX(90deg) rotateY(0deg) translate(-150px, -50px) translateZ(-50px);
+    }
+    .cube:nth-child(3) .piece {
+      transform: rotateX(0deg) rotateY(0deg) translate(-50px, -100px) translateZ(-100px);
+    }
+    @keyframes show-it {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+      25% {
+        transform: rotateX(0deg) rotateY(15deg);
+      }
+      75% {
+        transform: rotateX(-15deg) rotateY(15deg);
+      }
+      100% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+    }
+    .screen-grid {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .screen-grid:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: black;
+    }
+    .screen-grid:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cube">
+      <div class="piece"></div>
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="left"></div>
+    </div>
+    <div class="cube">
+      <div class="piece"></div>
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="left"></div>
+    </div>
+    <div class="cube">
+      <div class="piece"></div>
+      <div class="top"></div>
+      <div class="right"></div>
+      <div class="left"></div>
+    </div>
+  </div>
+  <!-- <div class="screen-grid"></div> -->
+  <script type="text/javascript">
+    'use strict';
+
+    var wrap = document.querySelector('.wrap');
+
+    document.body.addEventListener('mousemove', function (event) {
+      var halfWidth = window.innerWidth / 2;
+      var halfHeight = window.innerHeight / 2;
+      var dX = -(halfWidth - event.clientX) * 0.2;
+      var dY = (halfHeight - event.clientY) * 0.2;
+
+      wrap.style.transform = 'rotateX(' + dY + 'deg) rotateY(' + dX + 'deg)';
+    });
+  </script>
+</body>
+</html>
