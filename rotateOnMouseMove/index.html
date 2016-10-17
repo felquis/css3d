@@ -53,7 +53,7 @@
         }
 
       $doc.addEventListener('mousemove', function (e) {
-        // vars 
+        // vars
         var centroX   = e.clientX - screenWidth,
           centroY   = screenHeight - (e.clientY + 13),
           degX   = centroX * 0.1,
@@ -63,6 +63,17 @@
         $elem.style[validPropertyPrefix] = otherProperty + 'rotateY('+ degX +'deg)  rotateX('+ degY +'deg)';
       });
     })(document, window);
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49459747-5', 'auto');
+    ga('send', 'pageview');
+
   </script>
 </body>
 </html>
